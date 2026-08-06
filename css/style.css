@@ -1,0 +1,469 @@
+/* =====================================================
+   WEBSITE CONFIGURATION
+   Change shared visual values here before editing rules.
+   Token names describe their role, not a specific component.
+   ===================================================== */
+
+:root {
+    /* Colors: brand, surfaces, and text */
+    --primary-color: #1F3A5F;
+    --accent-color: #F4B400;
+    --background-color: #F8F9FA;
+    --text-color: #333333;
+    --white: #FFFFFF;
+
+    /* Typography: font families */
+    --font-heading: Georgia, serif;
+    --font-body: Arial, Helvetica, sans-serif;
+    --font-mono: Consolas, monospace;
+
+    /* Typography: font sizes */
+    --font-size-h1: 3rem;
+    --font-size-h2: 2.2rem;
+    --font-size-body: 1rem;
+
+    /* Layout: shared dimensions */
+    --max-width: 1200px;
+    --header-height: 120px;
+    --mobile-logo-height: 75px;
+    --page-padding-inline: 30px;
+
+    /* Spacing: use these values for new layout rules */
+    --space-xs: 5px;
+    --space-sm: 10px;
+    --space-md: 20px;
+    --space-lg: 40px;
+    --space-xl: 80px;
+
+    /* Borders: shared corner treatment */
+    --border-radius: 10px;
+
+    /* Shadows: elevation levels */
+    --shadow-light: 0 2px 6px rgba(0, 0, 0, .15);
+    --shadow-heavy: 0 10px 30px rgba(0, 0, 0, .25);
+
+    /* Animation: shared interaction timing */
+    --transition-speed: .3s;
+}
+
+/* =====================================================
+   GLOBAL STYLES
+   Document-level defaults shared by every page.
+   ===================================================== */
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    margin: 0;
+    padding: var(--space-sm) var(--page-padding-inline);
+}
+
+a,
+button {
+    transition: all var(--transition-speed);
+}
+
+/* =====================================================
+   TYPOGRAPHY
+   Base text and heading presentation.
+   ===================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+/* =====================================================
+   LAYOUT
+   Reusable width and alignment patterns.
+   ===================================================== */
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+/* =====================================================
+   HEADER
+   Sticky site header and branding.
+   ===================================================== */
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: var(--space-sm) var(--page-padding-inline);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.logo img {
+    height: var(--header-height);
+    width: auto;
+    display: block;
+}
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.hero {
+
+    padding: var(--space-xl) 0;
+
+    background: var(--background-color);
+
+}
+
+.hero-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: var(--space-xl);
+
+}
+
+.hero-content {
+
+    flex: 1;
+
+}
+
+.hero h1 {
+
+    font-size: var(--font-size-h1);
+
+    margin-bottom: var(--space-sm);
+
+}
+
+.hero-tagline {
+
+    font-size: 2rem;
+
+    color: var(--accent-color);
+
+    margin-bottom: var(--space-md);
+
+}
+
+.hero-description {
+
+    font-size: 1.15rem;
+
+    max-width: 600px;
+
+    margin-bottom: var(--space-lg);
+
+}
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: var(--space-md);
+
+    margin-bottom: var(--space-lg);
+
+}
+
+.btn {
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    padding: 14px 28px;
+
+    border-radius: var(--border-radius);
+
+    font-weight: bold;
+
+    transition: all var(--transition-speed);
+
+}
+
+.btn-primary {
+
+    background: var(--accent-color);
+
+    color: var(--primary-color);
+
+}
+
+.btn-primary:hover {
+
+    transform: translateY(-2px);
+
+}
+
+.btn-secondary {
+
+    border: 2px solid var(--primary-color);
+
+    color: var(--primary-color);
+
+}
+
+.btn-secondary:hover {
+
+    background: var(--primary-color);
+
+    color: var(--white);
+
+}
+
+.hero-highlights {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+.hero-highlights li {
+
+    margin-bottom: 12px;
+
+    font-weight: 600;
+
+}
+
+.hero-highlights li::before {
+
+    content: "✓ ";
+
+    color: green;
+
+    font-weight: bold;
+
+}
+
+.hero-image {
+
+    flex: 1;
+
+    text-align: center;
+
+}
+
+.hero-image img {
+
+    width: 100%;
+
+    max-width: 550px;
+
+    border-radius: var(--border-radius);
+
+    box-shadow: var(--shadow-heavy);
+
+}
+
+/* =====================================================
+   SERVICES
+   ===================================================== */
+
+.services {
+
+    padding: var(--space-xl) 0;
+
+    background: var(--white);
+
+}
+
+.section-header {
+
+    text-align: center;
+
+    margin-bottom: var(--space-xl);
+
+}
+
+.section-header p {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+}
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: var(--space-lg);
+
+}
+
+.service-card {
+
+    background: var(--background-color);
+
+    padding: var(--space-lg);
+
+    border-radius: var(--border-radius);
+
+    text-align: center;
+
+    box-shadow: var(--shadow-light);
+
+    transition: transform var(--transition-speed),
+                box-shadow var(--transition-speed);
+
+}
+
+.service-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow-heavy);
+
+}
+
+.service-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin-bottom: var(--space-md);
+
+}
+
+.service-card h3 {
+
+    margin-bottom: var(--space-sm);
+
+}
+
+.service-link {
+
+    display: inline-block;
+
+    margin-top: var(--space-md);
+
+    color: var(--primary-color);
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+}
+
+.service-link:hover {
+
+    color: var(--accent-color);
+
+}
+
+.services-note {
+
+    text-align: center;
+
+    margin-top: var(--space-xl);
+
+}
+
+/* =====================================================
+   NAVIGATION
+   Header navigation links and their states.
+   ===================================================== */
+
+header a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: var(--space-md);
+    font-weight: bold;
+}
+
+header a:hover {
+    color: var(--accent-color);
+}
+
+/* =====================================================
+   BUTTONS
+   Place shared call-to-action styles here.
+   ===================================================== */
+
+/* =====================================================
+   COMPONENTS
+   Place reusable, self-contained UI patterns here.
+   ===================================================== */
+
+/* =====================================================
+   PAGE SECTIONS
+   Place page-specific content-section styles here.
+   ===================================================== */
+
+/* =====================================================
+   FORMS
+   Place controls, labels, and validation states here.
+   ===================================================== */
+
+/* =====================================================
+   FOOTER
+   Place footer-specific presentation here.
+   ===================================================== */
+
+/* =====================================================
+   UTILITIES
+   Place small, single-purpose helper classes here.
+   ===================================================== */
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   Keep viewport-specific overrides together at the end.
+   ===================================================== */
+
+/* Mobile breakpoint: 768px. Keep this value aligned with related JS, if added. */
+@media (max-width: 768px) {
+    .logo img {
+        height: var(--mobile-logo-height);
+    }
+}
+
+.hero-container {
+
+    flex-direction: column;
+
+    text-align: center;
+
+}
+
+.hero-description {
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+.hero-buttons {
+
+    justify-content: center;
+
+}
+
+.hero-image {
+
+    order: -1;
+
+}
