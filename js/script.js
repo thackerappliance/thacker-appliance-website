@@ -14,7 +14,7 @@ const siteConfig = Object.freeze({
     contact: {
         phoneNumber: "+16159622134",
         phoneDisplay: "(615) 962-2134",
-        emailAddress: "thackerappliance@gmail.com"
+        emailAddress: "service@thackerappliance.com"
     }
 });
 
